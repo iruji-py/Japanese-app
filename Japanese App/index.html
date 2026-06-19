@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d18">
+  <meta name="description" content="Tabi — practical Japanese for real trips, real moments, and less travel anxiety.">
+  <title>Tabi — Japanese for the journey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#" aria-label="Tabi home">
+        <span class="brand-mark">旅</span>
+        <span><strong>tabi</strong><small>TRAVEL JAPANESE</small></span>
+      </a>
+
+      <nav class="side-nav">
+        <button class="nav-item active" data-view="learn">
+          <span class="nav-icon">⌂</span><span>Learn</span>
+        </button>
+        <button class="nav-item" data-view="practice">
+          <span class="nav-icon">◎</span><span>Practice</span>
+        </button>
+        <button class="nav-item" data-view="progress">
+          <span class="nav-icon">↗</span><span>My progress</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-trip">
+        <span class="eyebrow">YOUR GOAL</span>
+        <div class="trip-row"><span>🇯🇵</span><strong>Japan trip</strong></div>
+        <p>Build calm, useful confidence for the moments that matter.</p>
+        <div class="mini-progress"><span id="sidebar-progress"></span></div>
+        <small id="sidebar-progress-label">0% trip ready</small>
+      </div>
+
+      <button class="profile-button" aria-label="Open profile">
+        <span class="avatar">JM</span>
+        <span><strong>Jaydan</strong><small>Traveller</small></span>
+        <span class="chevron">›</span>
+      </button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">旅</span><strong>tabi</strong></div>
+        <div class="topbar-spacer"></div>
+        <div class="stat-chip streak-chip" title="Current streak"><span>🔥</span><strong id="streak-count">7</strong></div>
+        <div class="stat-chip xp-chip" title="Experience points"><span>✦</span><strong id="xp-count">320 XP</strong></div>
+        <button class="sound-toggle" id="sound-toggle" aria-label="Toggle sound"><span>♪</span></button>
+      </header>
+
+      <div id="view-root" tabindex="-1"></div>
+    </main>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <button class="mobile-nav-item active" data-view="learn"><span>⌂</span><small>Learn</small></button>
+    <button class="mobile-nav-item" data-view="practice"><span>◎</span><small>Practice</small></button>
+    <button class="mobile-nav-item" data-view="progress"><span>↗</span><small>Progress</small></button>
+    <button class="mobile-nav-item" data-view="profile"><span>●</span><small>Profile</small></button>
+  </nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
